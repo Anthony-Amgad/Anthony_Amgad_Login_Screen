@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainColor"
+    tools:context=".LoginScreen">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_zatur_logos_transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernamelab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/edgepi"
+        android:text="Username:"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/usernametxt"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="@color/mainColorVar"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/mainColor"
+        android:hint="Type in your username"
+        android:paddingLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@id/usernamelab"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usernamelab" />
+
+    <TextView
+        android:id="@+id/passwordlab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/edgepi"
+        android:text="Password:"
+        android:textSize="36sp"
+        app:layout_constraintLeft_toLeftOf="@id/usernametxt"
+        app:layout_constraintTop_toBottomOf="@id/usernametxt" />
+
+    <EditText
+        android:id="@+id/passwordtxt"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundrec"
+        android:backgroundTint="@color/mainColorVar"
+        android:drawableLeft="@drawable/ic_key"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/mainColor"
+        android:hint="Type in your password"
+        android:paddingLeft="8dp"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="@id/passwordlab"
+        app:layout_constraintRight_toRightOf="@id/usernametxt"
+        app:layout_constraintTop_toBottomOf="@id/passwordlab" />
+
+    <ImageView
+        android:id="@+id/passshoweye"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_eye"
+        app:layout_constraintBottom_toBottomOf="@id/passwordtxt"
+        app:layout_constraintRight_toRightOf="@id/passwordtxt"
+        app:layout_constraintTop_toTopOf="@id/passwordtxt"
+        app:tint="@color/mainColor" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginbtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundrec"
+        android:fontFamily="@font/edgepi"
+        android:text="Login"
+        android:textColor="@color/mainColor"
+        android:textSize="30sp"
+        app:layout_constraintRight_toRightOf="@id/passwordtxt"
+        app:layout_constraintTop_toBottomOf="@id/passwordtxt" />
+
+    <TextView
+        android:id="@+id/olotag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other login options:"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@id/passwordtxt"
+        app:layout_constraintTop_toBottomOf="@id/loginbtn" />
+
+    <ImageView
+        android:id="@+id/facebookbtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_facebook"
+        app:layout_constraintLeft_toLeftOf="@id/passwordtxt"
+        app:layout_constraintTop_toBottomOf="@id/olotag" />
+
+    <ImageView
+        android:id="@+id/googlebtn"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_google"
+        app:layout_constraintLeft_toRightOf="@id/facebookbtn"
+        app:layout_constraintTop_toBottomOf="@id/olotag" />
+
+    <TextView
+        android:id="@+id/iydhaayctag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="If you don't have an account, you could "
+        android:textSize="12sp"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/signupbt"
+        app:layout_constraintTop_toBottomOf="@id/facebookbtn" />
+
+    <TextView
+        android:id="@+id/signupbt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="SIGN UP"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@id/iydhaayctag"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/facebookbtn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
